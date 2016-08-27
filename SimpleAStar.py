@@ -1,3 +1,4 @@
+import time
 grid = [[0, 0, 0, 0, 0, 1],
         [1, 1, 0, 0, 0, 1],
         [0, 0, 0, 1, 0, 0],
@@ -7,14 +8,18 @@ grid = [[0, 0, 0, 0, 0, 1],
 
 def search(x, y):
     if grid[x][y] == 2:
+        time.sleep(3)
         print('found at %d,%d' % (x, y))
         return True
     elif grid[x][y] == 1:
+        time.sleep(3)
         print('wall at %d,%d' % (x, y))
         return False
     elif grid[x][y] == 3:
+        time.sleep(3)
         print('visited at %d,%d' % (x, y))
         return False
+    time.sleep(3)
     print('visiting %d,%d' % (x, y))
 
     # mark as visited
